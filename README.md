@@ -1,2 +1,3 @@
-# pitch-deck-2206
-Discarbon's
+# Pitch Deck, June 2022
+
+Discarbon's purpose and aims as of June, 2022.
