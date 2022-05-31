@@ -1,57 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-		  <div class="slides">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
 
-      			<style>
-				.reveal .title-custom {
-					text-transform: lowercase;
-				}
-			</style>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <style>
+          .reveal .title-custom {
+            text-transform: lowercase;
+            text-align: left;
+          }
+          .reveal .slides .section-custom {
+            background-image: "./images/nasa-E7q00J_8N7A-unsplash.jpg";
+          }
+        </style>
+        <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
+          <h1 class="title-custom">discarbon</h1>
+          <h2 class="title-custom">
+            transparent & verifiable on-chain carbon retirements
+          </h2>
+          <div style="text-align: center">
+            <figure>
+              <img
+                src="./images/CO2_logo.png"
+                alt="discarbon logo"
+                width="300"
+              />
+            </figure>
+          </div>
+          <div style="text-align: right">
+            <p>
+              <small
+                >Photo credit:
+                <a
+                  href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                  >NASA</a
+                ></small
+              >
+            </p>
+          </div>
+        </section>
 
-			<section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg"></section>
-			<h1 class="title-custom">
-				discarbon
-			</h1>
-			<h2 class="title-custom">fun & incentivizing carbon retirements</h2>
-			<div style="text-align: center;">
-				<figure>
-					<img src="./images/CO2_logo.png" alt="discarbon logo" width="300"/>
-				</figure>
-			</div>
-            Photo credit: <a href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NASA</a>
-			</section>
-			</div>
-		</div>
+        <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
+          <h2 class="title-custom">purpose</h2>
+          <p align="left">
+            discarbon aims to provide tooling and clean interfaces that
+            intentivize the compensation of carbon emissions.
+          </p>
+          <p align="left">
+            discarbon makes retirements transparent and easily verifiable from a
+            wide variety of carbon offset projects by leveraging carbon
+            certificates tokenized on the blockchain via
+            <a href="https://toucan.earth">Toucan Protocol</a>
+            <img
+              style="vertical-align: middle"
+              src="./images/tc_symbol_OnDark_color.png"
+              alt="myclimate offset tool palette"
+              width="50"
+            />.
+          </p>
+        </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
+          <h2 class="title-custom">existing platforms</h2>
+          <p align="left">
+            <a href="https://co2.myclimate.org">myclimate.org</a> allows users
+            to offset emissions from a set of curated carbon offset projects
+          </p>
+          <figure>
+            <img
+              src="./images/myclimate.png"
+              alt="myclimate offset tool palette"
+              width="600"
+            />
+          </figure>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
+          <h2 class="title-custom">problem</h2>
+          <p align="left">existing retirement solutions:</p>
+          <ul>
+            <li>are expensive (the user incurs a considerable mark-up)</li>
+            <li>offer a limited set of carbon offset projects</li>
+            <li>lack transparency</li>
+            <li>don't allow public verification of the retirment</li>
+          </ul>
+        </section>
+
+        <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
+          <h2 class="title-custom">solution</h2>
+          <p align="left">discarbon allows:</p>
+          <ul>
+            <li>access to carbon certifcates at market price</li>
+            <li>choice from any tokenized carbon offset project</li>
+            <li>full transparency to the underlying carbon offset projects</li>
+            <li>
+              public verification of the retirement via an on-chain transaction
+            </li>
+          </ul>
+          <p align="left">
+            moreover, retirements are incentivized by issuing users with stylish
+            and fun NFTs that anyone can view in the discarbon gallery.
+          </p>
+        </section>
+
+        <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
+          <h2 class="title-custom">initial roadmap</h2>
+          <p align="left"><b>june</b></p>
+          <ol align="left">
+            <li>v1 of the flight offsetter</li>
+            <li>submit DevCon DIP for event offsetter</li>
+          </ol>
+          <p align="left"><b>july</b></p>
+          <ol align="left">
+            <li>add nft incentivization for flight offsetter</li>
+            <li>finalize DevCon DIP for event offsetter</li>
+            <li>start work on event offsetter</li>
+          </ol>
+          <p align="left"><b>august</b></p>
+          <ol align="left">
+            <li>event offsetter deployed for use DevCon6</li>
+          </ol>
+        </section>
+
+        <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
+          <h2 class="title-custom">team</h2>
+          <ul>
+            <li>danceratopz</li>
+            <li>haurog</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
