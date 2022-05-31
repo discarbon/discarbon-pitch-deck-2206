@@ -7,12 +7,16 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>reveal.js</title>
+    <title>disCarbon pitch deck, june 2022</title>
+    <link rel="icon" type="image/svg+xml" href="./images/CO2_logo.png" />
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
     <link rel="stylesheet" href="dist/theme/black.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
   </head>
@@ -22,144 +26,231 @@
       <div class="slides">
         <style>
           .reveal .title-custom {
-            text-transform: lowercase;
+            text-transform: none;
             text-align: left;
           }
           .reveal .footer {
             position: absolute;
-            bottom: 1em;
-            left: 1em;
-            font-size: 0.5em;
+            bottom: 0.5em;
+            left: 0%;
+            font-size: 2rem;
             z-index: 10;
           }
-          .reveal .slides .section-custom {
-            background-image: "./images/nasa-E7q00J_8N7A-unsplash.jpg";
+          .reveal p {
+            text-align: left;
+          }
+          .glow-bad {
+            text-shadow: 0 0 10px #ff0800;
+          }
+          .glow-good {
+            text-shadow: 0 0 10px #69eb12;
+          }
+          .grid-container {
+            display: grid;
+            grid-template-areas: "header header";
+            grid-template-columns: auto auto;
+            padding: 10px;
+          }
+          .grid-item {
+            /* background-color: rgba(255, 255, 255, 0.8); */
+            /* border: 10px solid rgba(0, 0, 0, 0.8); */
+            padding: 20px;
+            text-align: left;
           }
         </style>
 
         <div class="footer">
-          <small
-            ><img
+          <small>
+            <img
               style="vertical-align: middle"
               src="./images/CO2_logo.png"
-              alt="discarbon logo"
+              alt="disCarbon logo"
               width="40"
-            />discarbon &#169; 2022</small
+            />disCarbon &#169; 2022</small
           >
         </div>
 
         <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
-          <h1 class="title-custom">discarbon</h1>
-          <h2 class="title-custom">
-            transparent & verifiable on-chain carbon retirements
-          </h2>
-          <div style="text-align: center">
-            <figure>
-              <img
-                src="./images/CO2_logo.png"
-                alt="discarbon logo"
-                width="250"
-              />
-            </figure>
-          </div>
-          <div style="text-align: right">
-            <p>
-              <small
-                >Photo credit:
-                <a
-                  href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-                  >NASA</a
-                ></small
-              >
-            </p>
-          </div>
+          <h1 class="title-custom">disCarbon</h1>
+          <h2 class="title-custom">transparent & verifiable on-chain carbon retirement tools</h2>
+          <figure>
+            <img src="./images/CO2_logo.png" alt="disCarbon logo" height="215" />
+          </figure>
+          <!-- TODO: fix photo credit text alignment hack (add to footer)-->
+          <p style="font-size: 1rem; text-align: right">
+            photo credit:
+            <a
+              href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              >NASA</a
+            >
+          </p>
         </section>
 
         <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
           <h2 class="title-custom">purpose</h2>
-          <p align="left">
-            discarbon aims to provide tooling and clean interfaces that
-            intentivize the compensation of carbon emissions.
+          <p>
+            disCarbon aims to provide tooling and clean interfaces that incentivize carbon emission
+            compensation
           </p>
-          <p align="left">
-            discarbon makes retirements transparent and easily verifiable from a
-            wide variety of carbon offset projects by leveraging carbon
-            certificates tokenized on the blockchain via
+          <p>
+            disCarbon makes retirements transparent and easily verifiable from a wide variety of
+            carbon offset projects by leveraging carbon certificates tokenized on the blockchain via
             <a href="https://toucan.earth">Toucan Protocol</a>
             <img
               style="vertical-align: middle"
               src="./images/tc_symbol_OnDark_color.png"
-              alt="myclimate offset tool palette"
-              width="40"
+              alt="toucan logo"
+              width="35"
             />
           </p>
         </section>
 
         <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
           <h2 class="title-custom">existing platforms</h2>
-          <p align="left">
-            <a href="https://co2.myclimate.org">myclimate.org</a> allows users
-            to offset emissions from a set of curated carbon offset projects
+          <p>
+            <a href="https://co2.myclimate.org">myclimate.org</a> allows users to offset emissions
+            for different use cases from curated carbon offset projects
           </p>
           <figure>
-            <img
-              src="./images/myclimate.png"
-              alt="myclimate offset tool palette"
-              width="400"
-            />
+            <img src="./images/myclimate.png" alt="myclimate offset tool palette" width="400" />
           </figure>
         </section>
 
         <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
-          <h2 class="title-custom">problem</h2>
-          <p align="left">existing retirement solutions</p>
+          <h2 class="title-custom glow-bad">problem</h2>
+          <p>existing retirement solutions</p>
           <ul>
-            <li>are expensive (user incurs a considerable mark-up)</li>
-            <li>offer a limited set of carbon offset projects</li>
-            <li>lack transparency</li>
-            <li>don't allow public verification of the retirement</li>
+            <li>are <b class="glow-bad">expensive</b> (user incurs a considerable mark-up)</li>
+            <li>offer a <b class="glow-bad">limited set</b> of carbon offset projects</li>
+            <li><b class="glow-bad">lack transparency</b></li>
+            <li><b class="glow-bad">don't allow public verification</b> of the retirement</li>
           </ul>
         </section>
 
         <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
-          <h2 class="title-custom">solution</h2>
-          <p align="left">discarbon allows</p>
+          <h2 class="title-custom glow-good">solution</h2>
+          <p>disCarbon + Toucan allows</p>
           <ul>
-            <li>access to carbon certificates at market price</li>
-            <li>choice from any tokenized carbon offset project</li>
-            <li>full transparency of the underlying offset projects</li>
-            <li>public verification via an on-chain transaction</li>
+            <li>access to carbon certificates at <b class="glow-good">market price</b></li>
+            <li>choice of <b class="glow-good">any tokenized carbon offset project</b></li>
+            <li><b class="glow-good">full transparency</b> of the underlying offset projects</li>
+            <li>
+              <b class="glow-good">public verification</b> via an
+              <a href="https://docs.toucan.earth/protocol/burn/compensating-for-emissions"
+                ><b>on-chain transaction</b></a
+              >
+            </li>
+            <li>
+              <b class="glow-good">incentivized</b> retirements via stylish
+              <b><a href="https://ethereum.org/en/nft/">NFTs</a></b>
+            </li>
           </ul>
-          <p align="left">
-            moreover, retirements are incentivized by issuing users with stylish
-            NFTs viewable in the discarbon gallery
-          </p>
+        </section>
+
+        <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
+          <h2 class="title-custom">initial goals</h2>
+          <ol style="text-align: left">
+            <li>
+              develop a flight emission offsetter (powered by
+              <img
+                style="vertical-align: middle"
+                src="./images/tc_symbol_OnDark_color.png"
+                alt="toucan logo"
+                width="35"
+              />)
+            </li>
+            <li>
+              gain consensus to use an event emission offsetter for
+              <a href="https://devcon.org">DevCon</a>
+              <img
+                style="vertical-align: middle"
+                src="./images/DevConDeva_400x400.jpg"
+                alt="devcon deva"
+                width="35"
+              />
+              events via a
+              <a href="https://github.com/efdevcon/DIPs">development improvement proposal</a> (DIP)
+            </li>
+            <li>
+              develop an event emission offsetter (powered by
+              <img
+                style="vertical-align: middle"
+                src="./images/tc_symbol_OnDark_color.png"
+                alt="toucan logo"
+                width="35"
+              />)
+            </li>
+            <li>use event emission offsetter for DevCon6, Oct. 2022</li>
+            <li>
+              pursue possibility of disCarbon x <a href="https://ethglobal.com/">ETHGlobal</a>
+              <img
+                style="vertical-align: middle"
+                src="./images/ETHGlobal_400x400.jpg"
+                alt="ethglobal logo"
+                width="40"
+              />
+            </li>
+          </ol>
         </section>
 
         <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
           <h2 class="title-custom">initial roadmap</h2>
-          <p align="left"><b>june</b></p>
-          <ol align="left">
-            <li>v1 of the flight offsetter</li>
-            <li>submit DevCon DIP for event offsetter</li>
-          </ol>
-          <p align="left"><b>july</b></p>
-          <ol align="left">
-            <li>add nft incentivization for flight offsetter</li>
-            <li>finalize DevCon DIP for event offsetter</li>
-            <li>start work on event offsetter</li>
-          </ol>
-          <p align="left"><b>august</b></p>
-          <ol align="left">
-            <li>event offsetter deployed for DevCon6 ticketing</li>
+          <div class="grid-container">
+            <div class="grid-item"><b>june</b></div>
+            <div class="grid-item">
+              <ul>
+                <li>v1 of the flight offsetter</li>
+                <li>submit DevCon DIP (event offsetter)</li>
+              </ul>
+            </div>
+            <div class="grid-item"><b>july</b></div>
+            <div class="grid-item">
+              <ul>
+                <li>nft incentivization for flight offsetter</li>
+                <li>finalize DevCon DIP (event offsetter)</li>
+                <li>start work on event offsetter</li>
+              </ul>
+            </div>
+            <div class="grid-item"><b>august</b></div>
+            <div class="grid-item">
+              <ul>
+                <li>event offsetter deployed for DevCon6</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
+          <h2 class="title-custom">future possibilities</h2>
+          <ol style="text-align: left">
+            <li>expand the flight offsetter to other modes of transport</li>
+            <li>
+              develop a fun, educational emission offsetter (powered by
+              <img
+                style="vertical-align: middle"
+                src="./images/tc_symbol_OnDark_color.png"
+                alt="toucan logo"
+                width="35"
+              />)
+            </li>
+            <li>dynamic svg-based nfts that display on-chain state</li>
+            <li>pursue nft partnerhsips</li>
           </ol>
         </section>
 
         <section data-background-image="./images/nasa-E7q00J_8N7A-unsplash.jpg">
           <h2 class="title-custom">team</h2>
           <ul>
-            <li>danceratopz</li>
-            <li>haurog</li>
+            <li>
+              <a href="https://twitter.com/danceratopz"
+                ><i class="fa fa-twitter" style="font-size: 40px"></i>@danceratopz</a
+              >
+              /
+              <a href="https://github.com/danceratopz"><i class="fa fa-github"></i>danceratopz</a>
+            </li>
+            <li>
+              <a href="https://github.com/haurog"><i class="fa fa-github"></i>haurog</a>
+            </li>
           </ul>
         </section>
       </div>
