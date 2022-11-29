@@ -351,32 +351,23 @@
       });
     </script>
     <script>
-      Reveal.addEventListener("ready", function (event) {
-        if (Reveal.isFirstSlide()) {
-          document.getElementById("footer-right").innerHTML =
-            "<p>use ←/→ to navigate slides, hit ? for shortcuts</p>";
-        }
-      });
-      Reveal.addEventListener("slidechanged", function (event) {
-        if (Reveal.isFirstSlide()) {
-          console.log(Reveal.isFirstSlide());
-          document.getElementById("footer-right").innerHTML =
-            "<p>use ←/→ to navigate slides, hit ? for shortcuts</p>";
-        } else if (Reveal.isLastSlide()) {
-          const photoCredit = `
-          <p>
-            photo credit:
-            <a
-              href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-            >
-              NASA
-            </a>
-          </p>`;
-          document.getElementById("footer-right").innerHTML = photoCredit;
-        } else {
-          document.getElementById("footer-right").innerHTML = "";
-        }
-      });
+      if (window.location.search.match(/print-pdf/gi) === null) {
+        Reveal.addEventListener("ready", function (event) {
+          if (Reveal.isFirstSlide()) {
+            document.getElementById("footer-right").innerHTML =
+              "<p>use ←/→ to navigate slides, hit ? for shortcuts</p>";
+          }
+        });
+        Reveal.addEventListener("slidechanged", function (event) {
+          if (Reveal.isFirstSlide()) {
+            console.log(Reveal.isFirstSlide());
+            document.getElementById("footer-right").innerHTML =
+              "<p>use ←/→ to navigate slides, hit ? for shortcuts</p>";
+          } else {
+            document.getElementById("footer-right").innerHTML = "";
+          }
+        });
+      }
     </script>
   </body>
 </html>
